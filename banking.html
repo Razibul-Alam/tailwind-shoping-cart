@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="main grid grid-flow-col grid-cols-2 gap-8 mt-16">
+        <section class="container grid grid-cols-3 gap-4  m-auto">
+            <div class="breakfast bg-green-400 p-8 ">
+                <h1 class="text-3xl text-white" id="breakfast">Breakfast</h1>
+                <h3 class="text-2xl mt-2 text-white">Package-<span id="breakFastPrice">100</span></h3>
+                <input class="mt-4" type="number" name="" id="input-value" value="0">
+                <h1 class="text-4xl mt-4 text-white"><button class="bg-blue-600 px-3" type="submit" onclick="increametDecreament('increase')">+</button>
+                    <button class="bg-red-600 px-4" type="submit" onclick="increametDecreament('decrease')">-</button></h1>
+                <button type="submit" class="bg-red-500 px-6 py-1 mt-4" id="break-btn" onclick="getFoodText('breakfast','breakFastPrice')">Select</button>
+            </div>
+            <div class="breakfast bg-green-400 p-11 ">
+                <h1 class="text-3xl text-white" id="lunch">Lunch</h1>
+                <h3 class="text-2xl mt-2 text-white">Package-<span id="lunchPrice">120</span></h3>
+                <button type="submit" class="bg-red-500 px-6 py-1 mt-4" id="lunch" onclick="getFoodText('lunch','lunchPrice')">Select</button>
+            </div>
+            <div class="breakfast bg-green-400 p-11">
+                <h1 class="text-3xl text-white" id="dinner">Dinner</h1>
+                <h3 class="text-2xl mt-2 text-white">Package-<span id="dinnerPrice">150</span></h3>
+                <button type="submit" class="bg-red-500 px-6 py-1 mt-4" id="dinner" onclick="getFoodText('dinner','dinnerPrice')">Select</button>
+            </div>
+           
+        </section>
+        <div class="cart bg-blue-600 w-1/2 text-center">
+            <h1 class="text-4xl">Selected Package</h1>
+            <div id="item-list">
+
+            </div>
+            <h3 class="mt-4 text-2xl">Total cost $<span id="total-cost">00</span></h3>
+        </div>
+    </section>
+    <script src="/JS/index.js"></script>
+</body>
+</html>
